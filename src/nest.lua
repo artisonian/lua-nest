@@ -19,7 +19,7 @@ local commands = {
   "zrevrangebyscore", "zrevrank", "zscore", "zunionstore"
 }
 
-function table.compact (...)
+local function compact (...)
   local t = {}
   for _,v in pairs({...}) do
     if v ~= nil then t[#t + 1] = v end
@@ -45,7 +45,7 @@ function Nest.__index (t, k)
       local r = rawget(t, "redis")
       local cmd = r[k]
       return function(...)
-        local args = table.compact(...)
+        local args = compact(...)
         return cmd(r, args)
       end
     end

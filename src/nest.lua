@@ -1,4 +1,3 @@
-require "luarocks.require"
 local redis = require "redis"
 
 Nest = {}

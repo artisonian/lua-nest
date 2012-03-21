@@ -1,6 +1,5 @@
 package.path = package.path .. ";../src/?.lua;src/?.lua"
 
-require "luarocks.require"
 require "redis"
 local Nest = require "nest"
 

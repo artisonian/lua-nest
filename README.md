@@ -41,5 +41,5 @@ events:del()
 Testing
 ---
 
-    luarocks install shake
-    shake -r
+    luarocks install telescope
+    tsc -f test/*.lua
